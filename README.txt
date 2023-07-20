@@ -1,1 +1,0 @@
-site to do list on django
