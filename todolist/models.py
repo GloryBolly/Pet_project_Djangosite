@@ -10,7 +10,7 @@ class toDoList(models.Model):
     time_create = models.DateTimeField(auto_now_add=True, verbose_name="Time of creation")
     time_update = models.DateTimeField(auto_now=True, verbose_name="Update time")
     is_published = models.BooleanField(default=True, verbose_name="On portal")
-    cat = models.ForeignKey("Category", on_delete=models.PROTECT, verbose_name="Categories")
+    cat = models.ForeignKey("Category", on_delete=models.PROTECT, null=True, verbose_name="Categories")
 
     def __str__(self):
         return self.title
